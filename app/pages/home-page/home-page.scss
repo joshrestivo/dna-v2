@@ -1,0 +1,89 @@
+$landing-bg:      '../../img/bg.jpg';
+$landing-logo:	  '../../img/DNA-logo.png';
+
+
+.decoration-vertical
+{
+  flex-direction: column;
+  border-left: 1px solid darkslategray;
+}
+
+.icon
+{
+  font-size: 100%;
+}
+
+.logo-img
+{
+  height: auto;
+  max-height: 200px;
+}
+
+button.item, button.item.activated, div.item-inner
+{
+  background: transparent;
+  background-image: none !important;
+  border: none;
+  font-family: "Roboto";
+  font-size: 100%;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.landing-container
+{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.landing-bottom
+{
+  align-self: flex-end;
+  height: 33%;
+  padding: 10%;
+}
+
+.landing-middle
+{
+  max-width: 90%;
+  height: 33%;
+  padding: 7%;
+}
+
+.landing-top
+{
+  align-self: flex-start;
+  height: 33%;
+}
+
+.landing-background
+{
+  background:    linear-gradient(
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.6)
+  ),
+  url($landing-bg) no-repeat;
+  background-size: cover;
+}
+
+.landing-socials-logo
+{
+  max-height: 29px;
+  margin: 6px;
+}

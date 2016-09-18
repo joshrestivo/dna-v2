@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title [innerHtml]="p.title.rendered"></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (refresh)="doRefresh()">
+        <ion-refresher-content
+                pullingIcon="arrow-down"
+                pullingText="{{ 'PULL_TO_REFRESH' }}"
+                refreshingSpinner="circles"
+                refreshingText="{{ 'REFRESHING' }}">
+        </ion-refresher-content>
+    </ion-refresher>
+
+    <ion-item>
+            <img *ngIf="p._embedded['wp:featuredmedia']" [src]="p._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url"/>
+            <p [innerHtml]="p.content.rendered" class="post-text"></p>
+    </ion-item>
+
+    <div class="post-footer">
+        <a href="{{p.link}}" class="icon ion-link"><span class="post-source">DATA SOURCE</span></a>
+    </div>
+
+    <ion-infinite-scroll
+            ng-if="moreDataExists()"
+            on-infinite="loadMore()"
+            distance="1%"
+            immediate-check="false">
+    </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>DNA Mobile</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+    <ion-row class="row-01-row">
+            <ion-col class="row-01-col" *ngFor="let p of posts" (click)="openPost(p)">
+            <ion-card style="height: 90%;">
+                <ion-card-header [innerHTML]="source" class="row-01-header"></ion-card-header>
+                <img *ngIf="p._embedded['wp:featuredmedia']" [src]="p._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url" />
+                <ion-card-content>
+                    <ion-card-title [innerHTML]="p.title.rendered" class="row-01-title"></ion-card-title>
+                    <p [innerHTML]="p.excerpt.rendered"></p>
+                </ion-card-content>
+            </ion-card>
+            </ion-col>
+    </ion-row>

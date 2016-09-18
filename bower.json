@@ -1,0 +1,21 @@
+{
+  "name": "dnamobile",
+  "description": "dnaombile: Urban survival for downtown STL residents",
+  "main": "",
+  "authors": [
+    "joshrestivo <josh@6ceed.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "xml2js": "^0.4.16",
+    "xml2json": "^1.1.1"
+  }
+}

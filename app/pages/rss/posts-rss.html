@@ -1,0 +1,34 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>TEST hEADER</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-refresher (refresh)="doRefresh()">
+		<ion-refresher-content
+			pullingIcon="arrow-down"
+			pullingText="{{ 'PULL_TO_REFRESH' }}"
+			refreshingSpinner="circles"
+			refreshingText="{{ 'REFRESHING' }}">
+		</ion-refresher-content>
+	</ion-refresher>
+
+	<ion-list>
+		<button ion-item class="item-icon-right item item-body" *ngFor="let entry of entries" (click)="openPage(entry)">
+			<img ng-if="entry.imageThumb" [src]="entry.imageThumb" class="alignleft item-image" />
+			<h2 style="margin-top: 0;" [innerHTML]="entry.title"></h2>
+			<p style="padding-right: 5%; margin-bottom: 0; text-align: justify;" [innerHTML]="entry.description"></p>
+			<i class="icon ion-chevron-right icon-accessory"></i>
+		</button>
+	</ion-list>
+
+<ion-infinite-scroll
+	ng-if="moreDataExists()"
+	on-infinite="loadMore()"
+	distance="1%"
+	immediate-check="false">
+</ion-infinite-scroll>
+
+</ion-content>
+

@@ -1,0 +1,36 @@
+<ion-content padding="true" scroll="false" hide-nav-bar="true" class="landing-background landing-container" xmlns="">
+
+    <ion-row  class="landing-top">
+        <div></div>
+    </ion-row>
+    <ion-row  class="landing-middle">
+        <ion-col width-50>
+            <div>
+                <a [href]="logoUrl">
+                    <img [src]="logoImage" class="logo-img"/>
+                </a>
+            </div>
+        </ion-col>
+        <ion-col>
+            <ion-list>
+                <div class="decoration-vertical">
+                    <button ion-item *ngFor="let p of pages" (click)="openPage(p)" [ngStyle]="{'color': p.iconColor}">
+                        <div class="icon {{p.icon}}" style="display: inline;"></div>
+                        <div class="ion-item" style="display: inline;">&nbsp;&nbsp;{{p.title}}</div>
+                    </button>
+                </div>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+    <ion-row class="landing-bottom">
+        <div>
+        <a [href]="facebookUrl">
+            <img class="padding-left landing-socials-logo" [src]="facebookLogo"/>
+        </a>
+        <a [href]="twitterUrl">
+            <img class="padding-left landing-socials-logo" [src]="twitterLogo"/>
+        </a>
+        </div>
+    </ion-row>
+
+</ion-content>

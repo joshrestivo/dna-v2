@@ -1,0 +1,55 @@
+@import "../pages/home-page/home-page";
+@import "../pages/landing/landing-page";
+@import "../pages/posts/posts";
+@import "../icons/ionicons";
+
+@font-face {
+  font-family: 'Roboto';
+  src:  url('../../fonts/Roboto-Bold-webfont.woff') format('woff'),
+        url('../../fonts/Roboto-Bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.bar-button-default {
+  color: white;
+  background-color: transparent;
+}
+
+.toolbar-background {
+  background-color: rgb(196, 30, 59);
+}
+
+.toolbar-title {
+  color: white;
+  font-size: large;
+}
+
+ion-label {
+  margin: 20px 14px 1px 0;
+}
+
+ion-list > .item:last-child {
+  border-bottom: none;
+}
+
+ion-title {
+  color: white;
+  font-size: large;
+}
+
+.item img {
+  padding: 4%;
+}
+
+.item h2 {
+  font-weight: bold;
+}
+
+.item p {
+  line-height: 1.4em;
+}
+
+a {
+  color: rgb(196, 30, 59);
+}
